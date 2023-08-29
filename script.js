@@ -1,4 +1,6 @@
 
+// I hope that i have not dissapointed you :)
+
 document.addEventListener("DOMContentLoaded", function () {
 
   const navbar = [
@@ -62,22 +64,22 @@ document.addEventListener("DOMContentLoaded", function () {
   // Fetch product data from the API
   const productContainer = document.querySelector('.product-container');
 
-function fetchAndDisplayProducts() {
-  fetch('https://api.escuelajs.co/api/v1/products')
+  function fetchAndDisplayProducts() {
+    fetch('https://api.escuelajs.co/api/v1/products')
     .then(response => response.json())
     .then(data => {
       data.forEach(product => {
         const productElement = document.createElement('li');
         productElement.className = 'product-card'; // Add the product-card class
         productElement.innerHTML = `
-          <div class="imgBox">
-            <img src="${product.images[0]}" alt="Product Image">
-          </div>
-          <div class="content">
-            <h2>${product.name}</h2>
-            <span>${product.description}</span>
-            <p class="product-price">$${product.price.toFixed(2)}</p>
-          </div>
+        <div class="imgBox">
+        <img src="${product.images[0]}" alt="Product Image">
+        </div>
+        <div class="content">
+        <h2>${product.name}</h2>
+        <span>${product.description}</span>
+        <p class="product-price">$${product.price.toFixed(2)}</p>
+        </div>
         `;
         productContainer.appendChild(productElement);
       });
@@ -85,7 +87,7 @@ function fetchAndDisplayProducts() {
     .catch(error => {
       console.error('Error fetching product data:', error);
     });
-}
+  }
 
 // Call the function to fetch and display products
 fetchAndDisplayProducts();

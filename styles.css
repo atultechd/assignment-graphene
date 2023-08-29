@@ -228,9 +228,11 @@ button:hover {
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 10px;
+    color: white;
 }
 .contact .contact-content .left p{
     text-align: justify;
+    color: white;
 }
 .contact .contact-content .left .icons{
     margin: 10px 0;
@@ -245,13 +247,14 @@ button:hover {
 }
 .contact .contact-content .row i{
     font-size: 25px;
-    color: #2ab99e;
+    color: #225fff;
 }
 .contact .contact-content .info .head{
     font-weight: 500;
+    color: #5a5a5a;
 }
 .contact .contact-content .info .sub-title{
-    color: #333;
+    color: #fff;
 }
 .contact .right form .fields{
     display: flex;
@@ -304,11 +307,11 @@ button:hover {
   border-radius: 6px;
   cursor: pointer;
   flex-wrap: nowrap;
-  background: #2ab99e;
-  border: 2px solid #2ab99e;
+  background: #225fff;
+  border: 2px solid #225fff;
   transition: all 0.3s ease;
 }
 .right form .button-area button:hover{
-  color: #2ab99e;
+  color: #225aff;
   background: none;
 }

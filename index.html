@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
     <title>Company Assignment</title>
 </head>
 <body>
@@ -15,11 +20,105 @@
             <ul id="navbar"></ul>
         </nav>
     </header>
-    <section class="banner">
+
+    <section id="home" class="banner">
+        <!-- Home content goes here -->
+        
     </section>
-    <main>
-        <ul id="product-list"></ul>
-    </main>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <h3>Slide 1</h3>
+                <p>This is the content for slide 1.</p>
+            </div>
+            <div class="carousel-slide">
+                <h3>Slide 2</h3>
+                <p>This is the content for slide 2.</p>
+            </div>
+            <div class="carousel-slide">
+                <h3>Slide 3</h3>
+                <p>This is the content for slide 3.</p>
+            </div>
+        </div>  
+        <button id="prevBtn">Previous</button>
+        <button id="nextBtn">Next</button>
+    </section>
+
+
+    <section id="our-products">
+        <h2>Our Products</h2>
+        <div class="product-container">
+            <div class="product-list-container">
+                <ul id="product-list" class="product-list">
+                    <!-- JS will do the rest :)-->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="contact" id="contact">
+        <div class="max-width">
+            <h2 class="title">contact us</h2>
+            <div class="contact-content">
+                <div class="column left">
+                    <div class="text">get in touch </div>
+                    <p>Hey there, connect with me by sending your message and if you like my work then make sure to check out my github profile to connect with me.</p>
+                    <div class="icons">
+                        <div class="row">
+                            <i class="fas fa-user"></i>
+                            <div class="info">
+                                <div class="head">Name</div>
+                                <div class="sub-title">Atul Dwivedi</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="info">
+                                <div class="head">Address</div>
+                                <div class="sub-title">Delhi, India</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">atultechd@gmail.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="text">contact us</div>
+                    <form class="contact-form" action="https://formsubmit.co/atultechd+form_submit@email.com" method="POST">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://atultechd.github.io/assignment-graphene/">
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" name="name" required id="name_name" class="fullname" placeholder="Name">
+                            </div>
+                            <div class="field email">
+                                <input type="text" name="email" required id="email_email" class="email-input" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <input type="text" name="subject" required id="subject_subject" class="subject" placeholder="Subject">
+                        </div>
+                        <div class="field textarea">
+                            <textarea id="message_message" name="message" required class="message" cols="30" rows="10" placeholder="Message.."></textarea>
+                        </div>
+                        <div class="button-area">
+                            <button class="send-msg" type="submit">Send message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script src="script.js"></script>
 </body>
 </html>

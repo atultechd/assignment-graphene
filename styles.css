@@ -31,10 +31,15 @@ nav {
     margin-left: 20px;
 }
 
+h2{
+    color: #fff;
+    text-align: center;
+}
+
 ul {
     display: flex;
-    color: white;
-    margin-right: 750px; /* Add this line to create space to the right */
+    /*color: white;*/
+    /*margin-right: 750px; *//* Add this line to create space to the right */
 }
 
 li {
@@ -74,10 +79,236 @@ li:hover .submenu {
 .submenu li a {
     color: #333;
 }
+#about {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+    align-items: center; /* Horizontally center content */
+    text-align: center;
+}
 
-body .product img {
-    max-width: 100%;
-    width: 240px;
-    height: 240px;
+.carousel-container {
+    width: 100%; /* Ensure the carousel takes up the full width */
+    height: 100%; /* Ensure the carousel takes up the full height */
+    display: flex;
+    overflow: hidden; /* Hide overflow for smoother scrolling */
+    scroll-snap-type: x mandatory; /* Enable snap-scrolling horizontally */
+}
+
+.carousel-slide {
+    flex: 0 0 100%; /* Each slide takes up 100% width */
+    height: 100%; /* Each slide takes up 100% height */
+    scroll-snap-align: start; /* Snap alignment to the start of each slide */
+    padding: 20px;
+    text-align: center;
+    background-color: #4a4a4a;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out; /* Smooth slide transitions */
+}
+
+
+button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* for our product section */
+.product-container {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent cards from wrapping */
+  overflow-x: auto; /* Add horizontal scroll if necessary */
+  justify-content: flex-start; /* Align cards to the left */
+}
+
+.product-card {
+  flex: 0 0 auto; /* Allow cards to shrink if necessary */
+  width: 20rem; /* Adjust the width as needed */
+  height: auto; /* Allow the height to adjust to content */
+  margin: 1rem;
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  margin-right: 2rem; /* Add spacing between cards */
+}
+
+/* Hover effect for the product card */
+.product-card:hover .imgBox {
+    transform: translate(0.5rem, 0.5rem);
+}
+
+.product-card:hover .content {
+    transform: translate(-0.5rem, -0.5rem);
+}
+
+/* Styling for the product image */
+.product-card .imgBox {
+    flex: 1; /* Allow the image to expand */
+    overflow: hidden;
+    width: 100%;
+    max-width: 30rem; /* Set a maximum width for the image */
+}
+
+.product-card img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+}
+
+/* Styling for the product content */
+.product-card .content {
+    flex: 0 0 auto; /* Don't allow the description to grow */
+    padding: 1.5rem;
+    text-align: center;
+    background-color: #fff;
+    transition: 0.5s ease-in-out;
+}
+
+.product-card h2 {
+    font-size: 1.6rem;
+    color: #111;
+    font-weight: 500;
+    line-height: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.product-card span {
+    color: #555;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+/* Optional: Styling for the product price */
+.product-card .product-price {
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .product-container {
+        flex-wrap: wrap; /* Allow cards to wrap to the next row on smaller screens */
+        justify-content: center; /* Center cards horizontally */
+    }
+
+    .product-card {
+        margin: 4rem 2rem; /* Adjust margin for smaller screens */
+    }
+}
+
+
+
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* contact section styling */
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+}
+.contact .contact-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: #2ab99e;
+}
+.contact .contact-content .info .head{
+    font-weight: 500;
+}
+.contact .contact-content .info .sub-title{
+    color: #333;
+}
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.contact .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+.contact .right form .field input:focus,
+.contact .right form .textarea textarea:focus{
+    border-color: #b3b3b3;
+}
+.contact .right form .textarea textarea{
+  padding-top: 10px;
+  resize: none;
+}
+.contact .right form .button-area{
+  display: flex;
+  align-items: center;
+}
+.right form .button-area button{
+  color: #fff;
+  display: block;
+  width: 160px!important;
+  height: 45px;
+  outline: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  flex-wrap: nowrap;
+  background: #2ab99e;
+  border: 2px solid #2ab99e;
+  transition: all 0.3s ease;
+}
+.right form .button-area button:hover{
+  color: #2ab99e;
+  background: none;
 }
